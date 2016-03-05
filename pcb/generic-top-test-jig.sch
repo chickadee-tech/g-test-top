@@ -47,7 +47,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 7050 7000 0    197  ~ 0
-generic-top-test-jig
+generic-top-test-jig v2
 $Comp
 L CKD_SANDWICH PORT_IN1
 U 1 1 569EECFC
@@ -87,8 +87,6 @@ Text Label 6900 1700 2    60   ~ 0
 TIM3
 Text Label 6900 1800 2    60   ~ 0
 TIM4
-Text Label 6900 2000 2    60   ~ 0
-GPIO2
 Text Label 6900 2100 2    60   ~ 0
 GPIO3
 Text Label 6900 2200 2    60   ~ 0
@@ -264,7 +262,7 @@ Wire Wire Line
 	4150 7200 4150 7100
 Wire Wire Line
 	2650 7200 2400 7200
-Text Label 6900 1500 2    60   ~ 0
+Text Label 6900 2000 2    60   ~ 0
 SWCLK
 Text Label 6900 1900 2    60   ~ 0
 SWDIO
@@ -285,14 +283,12 @@ F 3 "" H 5550 2750 60  0000 C CNN
 	1    5500 2750
 	1    0    0    -1  
 $EndComp
-Text Label 5850 1500 0    60   ~ 0
-TIM2
 Text Label 5850 1600 0    60   ~ 0
-TIM3
+TIM2
 Text Label 5850 1700 0    60   ~ 0
-TIM4
+TIM3
 Text Label 5850 1800 0    60   ~ 0
-GPIO2
+TIM4
 Text Label 5850 1900 0    60   ~ 0
 GPIO3
 Text Label 5850 2000 0    60   ~ 0
@@ -542,8 +538,6 @@ Wire Wire Line
 	10300 4350 10550 4350
 Wire Wire Line
 	10550 4350 10550 4500
-NoConn ~ 9600 4300
-NoConn ~ 9600 4400
 $Comp
 L 74HC4051 U1
 U 1 1 56A05BA3
@@ -718,19 +712,17 @@ Wire Wire Line
 	3500 5150 3500 4950
 Wire Wire Line
 	3350 5150 3050 5150
-$Comp
-L +5V #PWR?
-U 1 1 56A08CD9
-P 2500 6000
-F 0 "#PWR?" H 2500 5850 50  0001 C CNN
-F 1 "+5V" H 2500 6140 50  0000 C CNN
-F 2 "" H 2500 6000 50  0000 C CNN
-F 3 "" H 2500 6000 50  0000 C CNN
-	1    2500 6000
-	1    0    0    -1  
-$EndComp
+Text Label 5850 1500 0    60   ~ 0
+TIM1
+Text Label 6900 1500 2    60   ~ 0
+TIM1
 Wire Wire Line
-	2950 6100 2500 6100
+	2950 6100 2900 6100
 Wire Wire Line
-	2500 6100 2500 6000
+	2900 6100 2900 6000
+Connection ~ 2900 6000
+NoConn ~ 9600 4400
+NoConn ~ 9600 4300
+Text Notes 800  6900 0    60   ~ 0
+Most pin connectivity is checked by reading pins\nvalues from the top of the jig. The six special pins\nprovided for FCs are checked with the reverse.\nThe bottom reads the values.
 $EndSCHEMATC
