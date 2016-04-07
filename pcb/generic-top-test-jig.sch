@@ -725,4 +725,88 @@ NoConn ~ 9600 4400
 NoConn ~ 9600 4300
 Text Notes 800  6900 0    60   ~ 0
 Most pin connectivity is checked by reading pins\nvalues from the top of the jig. The six special pins\nprovided for FCs are checked with the reverse.\nThe bottom reads the values.
+$Comp
+L C_Small C1
+U 1 1 56FCC33E
+P 5350 3850
+F 0 "C1" H 5360 3920 50  0000 L CNN
+F 1 "0.1uF" H 5360 3770 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 5350 3850 50  0001 C CNN
+F 3 "" H 5350 3850 50  0000 C CNN
+	1    5350 3850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5450 3850 5600 3850
+Connection ~ 5600 3850
+Wire Wire Line
+	5250 3850 5250 4000
+Connection ~ 5250 4000
+$Comp
+L C_Small C2
+U 1 1 56FCC498
+P 3300 5000
+F 0 "C2" H 3310 5070 50  0000 L CNN
+F 1 "0.1uF" H 3310 4920 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 3300 5000 50  0001 C CNN
+F 3 "" H 3300 5000 50  0000 C CNN
+	1    3300 5000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C_Small C3
+U 1 1 56FCC524
+P 5450 950
+F 0 "C3" H 5460 1020 50  0000 L CNN
+F 1 "0.1uF" H 5460 870 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 5450 950 50  0001 C CNN
+F 3 "" H 5450 950 50  0000 C CNN
+	1    5450 950 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C_Small C4
+U 1 1 56FCC627
+P 9850 3550
+F 0 "C4" H 9860 3620 50  0000 L CNN
+F 1 "0.1uF" H 9860 3470 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9850 3550 50  0001 C CNN
+F 3 "" H 9850 3550 50  0000 C CNN
+	1    9850 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C_Small C5
+U 1 1 56FCC6F1
+P 9850 6350
+F 0 "C5" H 9860 6420 50  0000 L CNN
+F 1 "0.1uF" H 9860 6270 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9850 6350 50  0001 C CNN
+F 3 "" H 9850 6350 50  0000 C CNN
+	1    9850 6350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9750 6350 9750 6250
+Connection ~ 9750 6250
+Wire Wire Line
+	9950 6350 10000 6350
+Wire Wire Line
+	9950 3550 10000 3550
+Connection ~ 10000 3550
+Wire Wire Line
+	9750 3550 9750 3400
+Connection ~ 9750 3400
+Wire Wire Line
+	5550 950  5600 950 
+Connection ~ 5600 950 
+Wire Wire Line
+	5350 950  5350 1050
+Connection ~ 5350 1050
+Wire Wire Line
+	3400 5000 3500 5000
+Connection ~ 3500 5000
+Wire Wire Line
+	3200 5000 3200 5150
+Connection ~ 3200 5150
 $EndSCHEMATC
