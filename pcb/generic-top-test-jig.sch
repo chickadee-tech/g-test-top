@@ -47,7 +47,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 7050 7000 0    197  ~ 0
-generic-top-test-jig v2
+generic-top-test-jig v3
 $Comp
 L CKD_SANDWICH PORT_IN1
 U 1 1 569EECFC
@@ -228,9 +228,9 @@ Text Label 3250 7200 1    60   ~ 0
 BOOT
 Text Label 3150 7200 1    60   ~ 0
 RESET
-Text Label 3050 7200 1    60   ~ 0
+Text Label 3050 6850 1    60   ~ 0
 SWDIO
-Text Label 2950 7200 1    60   ~ 0
+Text Label 2950 6850 1    60   ~ 0
 SWCLK
 Text Label 2850 7200 1    60   ~ 0
 RX
@@ -538,17 +538,6 @@ Wire Wire Line
 	10300 4350 10550 4350
 Wire Wire Line
 	10550 4350 10550 4500
-$Comp
-L 74HC4051 U1
-U 1 1 56A05BA3
-P 3400 6150
-F 0 "U1" H 3400 6300 60  0000 C CNN
-F 1 "74HC4051" V 3400 6650 60  0000 C CNN
-F 2 "nxp:SOT763-1(DHVQFN16)" H 3400 6150 60  0001 C CNN
-F 3 "" H 3400 6150 60  0000 C CNN
-	1    3400 6150
-	1    0    0    -1  
-$EndComp
 Text Label 3400 6400 3    60   ~ 0
 Z
 Text Label 2950 5450 2    60   ~ 0
@@ -578,10 +567,6 @@ Text Label 3900 5650 0    60   ~ 0
 Z2
 Text Label 3900 5750 0    60   ~ 0
 Z3
-NoConn ~ 3900 5850
-NoConn ~ 3900 5950
-NoConn ~ 3900 6050
-NoConn ~ 3900 6150
 $Comp
 L +5V #PWR08
 U 1 1 56A060BE
@@ -723,7 +708,7 @@ Wire Wire Line
 Connection ~ 2900 6000
 NoConn ~ 9600 4400
 NoConn ~ 9600 4300
-Text Notes 800  6900 0    60   ~ 0
+Text Notes 4400 7350 0    60   ~ 0
 Most pin connectivity is checked by reading pins\nvalues from the top of the jig. The six special pins\nprovided for FCs are checked with the reverse.\nThe bottom reads the values.
 $Comp
 L C_Small C1
@@ -809,4 +794,237 @@ Connection ~ 3500 5000
 Wire Wire Line
 	3200 5000 3200 5150
 Connection ~ 3200 5150
+$Comp
+L R_Small R3
+U 1 1 5709A11E
+P 4000 6150
+F 0 "R3" H 4030 6170 50  0000 L CNN
+F 1 "10k" H 4030 6110 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 4000 6150 50  0001 C CNN
+F 3 "" H 4000 6150 50  0000 C CNN
+	1    4000 6150
+	0    1    1    0   
+$EndComp
+$Comp
+L 74HC4051 U1
+U 1 1 56A05BA3
+P 3400 6150
+F 0 "U1" H 3400 6300 60  0000 C CNN
+F 1 "74HC4051" V 3400 6650 60  0000 C CNN
+F 2 "nxp:SOT763-1(DHVQFN16)" H 3400 6150 60  0001 C CNN
+F 3 "" H 3400 6150 60  0000 C CNN
+	1    3400 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R4
+U 1 1 5709A256
+P 4200 6050
+F 0 "R4" H 4230 6070 50  0000 L CNN
+F 1 "10k" H 4230 6010 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 4200 6050 50  0001 C CNN
+F 3 "" H 4200 6050 50  0000 C CNN
+	1    4200 6050
+	0    1    1    0   
+$EndComp
+$Comp
+L R_Small R5
+U 1 1 5709A304
+P 4400 5950
+F 0 "R5" H 4430 5970 50  0000 L CNN
+F 1 "10k" H 4430 5910 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 4400 5950 50  0001 C CNN
+F 3 "" H 4400 5950 50  0000 C CNN
+	1    4400 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L R_Small R6
+U 1 1 5709A384
+P 4600 5850
+F 0 "R6" H 4630 5870 50  0000 L CNN
+F 1 "10k" H 4630 5810 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 4600 5850 50  0001 C CNN
+F 3 "" H 4600 5850 50  0000 C CNN
+	1    4600 5850
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDPWR #PWR018
+U 1 1 5709A3C7
+P 4400 6250
+F 0 "#PWR018" H 4400 6050 50  0001 C CNN
+F 1 "GNDPWR" H 4400 6120 50  0000 C CNN
+F 2 "" H 4400 6200 50  0000 C CNN
+F 3 "" H 4400 6200 50  0000 C CNN
+	1    4400 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 5850 4500 5850
+Wire Wire Line
+	3900 5950 4300 5950
+Wire Wire Line
+	3900 6050 4100 6050
+Wire Wire Line
+	4100 6150 4700 6150
+Wire Wire Line
+	4400 6150 4400 6250
+Wire Wire Line
+	4300 6050 4300 6150
+Connection ~ 4300 6150
+Wire Wire Line
+	4500 6150 4500 5950
+Connection ~ 4400 6150
+Wire Wire Line
+	4700 6150 4700 5850
+Connection ~ 4500 6150
+$Comp
+L GNDPWR #PWR019
+U 1 1 5709A6BF
+P 5800 6300
+F 0 "#PWR019" H 5800 6100 50  0001 C CNN
+F 1 "GNDPWR" H 5800 6170 50  0000 C CNN
+F 2 "" H 5800 6250 50  0000 C CNN
+F 3 "" H 5800 6250 50  0000 C CNN
+	1    5800 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R8
+U 1 1 5709A6FA
+P 5600 6300
+F 0 "R8" H 5630 6320 50  0000 L CNN
+F 1 "10k" H 5630 6260 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 5600 6300 50  0001 C CNN
+F 3 "" H 5600 6300 50  0000 C CNN
+	1    5600 6300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5700 6300 5800 6300
+$Comp
+L R_Small R10
+U 1 1 5709A8A3
+P 10050 3950
+F 0 "R10" H 10080 3970 50  0000 L CNN
+F 1 "10k" H 10080 3910 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 10050 3950 50  0001 C CNN
+F 3 "" H 10050 3950 50  0000 C CNN
+	1    10050 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDPWR #PWR020
+U 1 1 5709A90B
+P 10300 3950
+F 0 "#PWR020" H 10300 3750 50  0001 C CNN
+F 1 "GNDPWR" H 10300 3820 50  0000 C CNN
+F 2 "" H 10300 3900 50  0000 C CNN
+F 3 "" H 10300 3900 50  0000 C CNN
+	1    10300 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 3950 10300 3950
+$Comp
+L R_Small R9
+U 1 1 5709AA92
+P 10050 1100
+F 0 "R9" H 10080 1120 50  0000 L CNN
+F 1 "10k" H 10080 1060 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 10050 1100 50  0001 C CNN
+F 3 "" H 10050 1100 50  0000 C CNN
+	1    10050 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L R_Small R7
+U 1 1 5709AAEE
+P 5600 3350
+F 0 "R7" H 5630 3370 50  0000 L CNN
+F 1 "10k" H 5630 3310 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 5600 3350 50  0001 C CNN
+F 3 "" H 5600 3350 50  0000 C CNN
+	1    5600 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDPWR #PWR021
+U 1 1 5709AB61
+P 10300 1100
+F 0 "#PWR021" H 10300 900 50  0001 C CNN
+F 1 "GNDPWR" H 10300 970 50  0000 C CNN
+F 2 "" H 10300 1050 50  0000 C CNN
+F 3 "" H 10300 1050 50  0000 C CNN
+	1    10300 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDPWR #PWR022
+U 1 1 5709ABA8
+P 5850 3350
+F 0 "#PWR022" H 5850 3150 50  0001 C CNN
+F 1 "GNDPWR" H 5850 3220 50  0000 C CNN
+F 2 "" H 5850 3300 50  0000 C CNN
+F 3 "" H 5850 3300 50  0000 C CNN
+	1    5850 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3350 5850 3350
+Wire Wire Line
+	10150 1100 10300 1100
+$Comp
+L R_Small R1
+U 1 1 5709B112
+P 2950 7000
+F 0 "R1" H 2980 7020 50  0000 L CNN
+F 1 "220" H 2980 6960 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 2950 7000 50  0001 C CNN
+F 3 "" H 2950 7000 50  0000 C CNN
+	1    2950 7000
+	-1   0    0    1   
+$EndComp
+$Comp
+L R_Small R2
+U 1 1 5709B204
+P 3050 7000
+F 0 "R2" H 2950 6750 50  0000 L CNN
+F 1 "220" H 2850 6850 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 3050 7000 50  0001 C CNN
+F 3 "" H 3050 7000 50  0000 C CNN
+	1    3050 7000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2950 7200 2950 7100
+Wire Wire Line
+	3050 7200 3050 7100
+Wire Wire Line
+	2950 6900 2950 6850
+Wire Wire Line
+	3050 6850 3050 6900
+$Comp
+L R_Small R11
+U 1 1 570BFA23
+P 3500 6400
+F 0 "R11" H 3350 6550 50  0000 L CNN
+F 1 "10k" V 3400 6350 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 3500 6400 50  0001 C CNN
+F 3 "" H 3500 6400 50  0000 C CNN
+	1    3500 6400
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDPWR #PWR023
+U 1 1 570BFC26
+P 3600 6400
+F 0 "#PWR023" H 3600 6200 50  0001 C CNN
+F 1 "GNDPWR" H 3600 6270 50  0000 C CNN
+F 2 "" H 3600 6350 50  0000 C CNN
+F 3 "" H 3600 6350 50  0000 C CNN
+	1    3600 6400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
