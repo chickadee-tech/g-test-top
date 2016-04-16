@@ -1,6 +1,8 @@
 part name,symbol,size (imp),max current,unit price,units per build,units in stock,order total,Manufacturer ID,source url,datasheet,datasheet2,,,
-80 pin header,PORT_IN1,,,$1.35,1,1,$1.35,DF40C-80DP-0.4V(51),http://www.digikey.com/product-detail/en/DF40C-80DP-0.4V(51)/H11632CT-ND/1969511,N,http://www.hirose.co.jp/cataloge_hp/ed_DF40_20140305.pdf,,Total Base Cost,$7.04
+80 pin header,PORT_IN1,,,$1.35,1,1,$1.35,DF40C-80DP-0.4V(51),http://www.digikey.com/product-detail/en/DF40C-80DP-0.4V(51)/H11632CT-ND/1969511,N,http://www.hirose.co.jp/cataloge_hp/ed_DF40_20140305.pdf,,Total Base Cost,$7.13
 side entry bottom 16pos 1mm,P1,,,$0.92,1,0,$0.92,SFW16R-3STE1LF,http://www.digikey.com/product-detail/en/SFW16R-3STE1LF/609-1909-1-ND/1003194,N,,price ranges 1.40 - 2.50,,
 1x8 mux,U1,16-VFQFN Exposed Pad,,$0.43,1,1,$0.43,"74HC4051BQ,115","http://www.digikey.com/product-detail/en/74HC4051BQ,115/568-7741-1-ND/2753885",N,http://www.nxp.com/documents/data_sheet/74HC_HCT4051.pdf,,,
 1x16 mux,"U2, U3, U4, U5",24-VFQFN Exposed Pad,,$1.06,4,0,$4.26,"74HC4067BQ,118","http://www.digikey.com/product-detail/en/74HC4067BQ,118/568-8885-1-ND/2813803",N,http://www.nxp.com/documents/data_sheet/74HC_HCT4067.pdf,,,
 ~3.5mm Spacer,Off Board,,,$0.08,1,81,$0.08,908-140,http://www.mouser.com/search/ProductDetail.aspx?R=0virtualkey0virtualkey908-140,N,http://www.bivar.com/Portals/0/Products/d.ashx?f=/Portals/0/products/9XX-XXX.pdf,,,
+R 220,"R1, R2",603,,$0.00,2,493,$0.01,RC0603JR-07220RL,http://www.digikey.com/product-detail/en/yageo/RC0603JR-07220RL/311-220GRCT-ND/729688,MF-RES-0603-220,http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf,,,
+R 10k,"R3, R4, R5, R6, R7, R8, R9, R10, R11",603,,$0.01,9,979,$0.09,RC0603FR-0710KL,http://www.digikey.com/product-detail/en/RC0603FR-0710KL/311-10.0KHRCT-ND/729827,MF-RES-0603-10K,http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf,,,
